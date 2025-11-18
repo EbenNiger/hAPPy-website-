@@ -1,4 +1,5 @@
-here* {
+/* ----------------- Base Styles ----------------- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +7,12 @@ here* {
 }
 
 body {
-    background: #ffffff;
-    color: #111;
     line-height: 1.6;
+    color: #111111;
+    background: linear-gradient(135deg, #FFE5E0, #FFD6CC); /* soft peach gradient */
 }
 
-/* Header */
+/* ----------------- Header ----------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -23,110 +24,147 @@ header {
 .logo {
     font-weight: 700;
     font-size: 20px;
+    color: #FF6B6B;
 }
 
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
+    color: #111111;
     font-size: 15px;
 }
 
-/* Hero */
+nav a:hover {
+    color: #FF6B6B;
+}
+
+/* ----------------- Hero Section ----------------- */
 .hero {
     text-align: center;
     padding: 120px 20px;
-    max-width: 900px;
-    margin: auto;
 }
 
+/* App icon box for logo */
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* H forming A logo */
+.logo-ha {
+    position: relative;
+    width: 60px;
+    height: 80px;
+}
+
+.logo-ha .pillar {
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    background: #FF6B6B;
+    top: 0;
+}
+
+.logo-ha .pillar.left { left: 0; }
+.logo-ha .pillar.right { right: 0; }
+
+.logo-ha .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid #FF6B6B;
+    top: 20px;
+    left: 0;
+}
+
+/* Hero text */
 .hero h1 {
     font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.hero span {
-    color: #4b7cff;
+    margin: 20px 0;
+    color: #111111;
 }
 
 .hero p {
+    font-size: 18px;
+    color: #555555;
     max-width: 600px;
     margin: auto;
     margin-bottom: 30px;
-    color: #555;
 }
 
 .btn {
     padding: 12px 24px;
-    background: #4b7cff;
+    background: #FF6B6B;
     color: white;
     text-decoration: none;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
-/* About */
+.btn:hover {
+    background: #FF4B4B;
+}
+
+/* ----------------- About Section ----------------- */
 .about {
     text-align: center;
     padding: 80px 20px;
     max-width: 800px;
     margin: auto;
+    background: #ffffff;
 }
 
-.about p {
-    color: #444;
-    margin-top: 10px;
-}
+.about h2 { color: #111111; margin-bottom: 20px; }
+.about p { color: #555555; }
 
-/* Testimonials */
+/* ----------------- Testimonials ----------------- */
 .testimonials {
-    background: #f8f8f8;
+    background: #F8F8F8;
     padding: 80px 20px;
 }
 
-.testimonials h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
+.testimonials h2 { text-align: center; margin-bottom: 40px; color: #111111; }
+.testi-grid { max-width: 1000px; margin: auto; display: grid; gap: 20px; }
+.testi { background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); color: #111111; }
+.testi span { display: block; margin-top: 8px; color: #666666; }
 
-.testi-grid {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    gap: 20px;
-}
-
-.testi {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.testi span {
-    display: block;
-    margin-top: 8px;
-    color: #666;
-}
-
-/* Contact */
+/* ----------------- Contact Section ----------------- */
 .contact {
     text-align: center;
     padding: 80px 20px;
+    background: #ffffff;
 }
+.contact h2 { color: #111111; margin-bottom: 20px; }
 
 .whatsapp {
     background: #25D366 !important;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
 }
+.whatsapp:hover { background: #1DA851; }
 
-/* Footer */
+/* ----------------- Footer ----------------- */
 footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    color: #666;
+    color: #666666;
+    background: #ffffff;
 }
 
+/* ----------------- Fade Animation ----------------- */
 .fade {
     opacity: 0;
     transform: translateY(20px);
@@ -136,4 +174,4 @@ footer {
 .fade.visible {
     opacity: 1;
     transform: translateY(0);
-      }
+    }
